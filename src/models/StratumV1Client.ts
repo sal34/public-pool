@@ -392,11 +392,11 @@ export class StratumV1Client {
 
         let payoutInformation;
         const devFeeAddress = this.configService.get('DEV_FEE_ADDRESS');
-        //50Th/s
+        //--50Th/s--  --> 1h/s so for everyone
         this.noFee = false;
         if (this.entity) {
             this.hashRate = this.statistics.hashRate;
-            this.noFee = this.hashRate != 0 && this.hashRate < 50000000000000;
+            this.noFee = this.hashRate != 0 && this.hashRate < 1;
         }
         if (this.noFee || devFeeAddress == null || devFeeAddress.length < 1) {
             payoutInformation = [
@@ -405,7 +405,7 @@ export class StratumV1Client {
 
         } else {
             payoutInformation = [
-                { address: devFeeAddress, percent: 1.5 },
+                { address: devFeeAddress, percent: 1.5 }, 
                 { address: this.clientAuthorization.address, percent: 98.5 }
             ];
         }

@@ -37,14 +37,14 @@ export class BTCPayService {
             name: 'string',
             description: 'string',
             amount: '0.1',
-            currency: 'BTC',
+            currency: 'BC2',
             period: 604800,
             BOLT11Expiration: 30,
             autoApproveClaims: false,
             startsAt: 1592312018,
             expiresAt: 1593129600,
             paymentMethods: [
-                'BTC'
+                'BC2'
             ]
 
         }

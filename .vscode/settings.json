@@ -16,5 +16,13 @@
         "submitblock",
         "Tempalte"
     ],
-    "idf.portWin": "COM30"
+    "idf.portWin": "COM30",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".mule": true
+    }
 }

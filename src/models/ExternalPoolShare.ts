@@ -8,7 +8,7 @@ export class ExternalPoolShare {
   worker: string;
 
   @IsString()
-  @IsBitcoinAddress()
+  //@IsBitcoinAddress()
   address: string;
 
   @IsString()
